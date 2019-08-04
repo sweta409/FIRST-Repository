@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="assingment.js"></script>
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: center;
+  background-color: #00ffbf;
+}
+td {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+
+caption {
+text-align: left;
+}
+body {
+  margin: 7px;
+  font-family: Arial, courier;
+ }
+ .box{
+  background-color: #b3b3cc;
+  margin-top: 20px;
+  width: 700px;
+  height: 400px;
+
+ }
+</style>
+</head>
+<body>
+
+<h1>Electricity Traiff</h1>
+<h2>Traiff Rates</h2>
+<h3>1.Domestic Consumers:</h3>
+
+<table style="width: 100%">
+  <caption>(a).Service and Energy Charge (Single phase)</caption>
+  <tr>
+  <th>&Wh(Monthly Units)</th>
+  <th colspan="2">5 Ampere</th>
+  <th colspan="2">15 Ampere</th>
+  <th colspan="2">30 Ampere</th>
+  <th colspan="2">60 Ampere</th>
+  </tr>
+  <tr>
+  <td>0-20</td>
+  <td>30.00</td>
+  <td>3.00</td>
+  <td>50.00</td>
+  <td>4.00</td>
+  <td>75.00</td>
+  <td>5.00</td>
+  <td>125.00</td>
+  <td>6.00</td>
+  </tr>
+  <tr>
+  <td>21-30</td>
+  <td>50.00</td>
+  <td>7.00</td>
+  <td>75.00</td>
+  <td>7.00</td>
+  <td>100.00</td>
+  <td>7.00</td>
+  <td>150.00</td>
+  <td>7.00</td>
+  </tr>
+  <tr>
+  <td>31-50</td>
+  <td>75.00</td>
+  <td>8.50</td>
+  <td>100.00</td>
+  <td>8.50</td>
+  <td>125.00</td>
+  <td>8.50</td>
+  <td>175.00</td>
+  <td>8.50</td>
+  </tr>
+  <tr>
+  <td>51-150</td>
+  <td>100.00</td>
+  <td>10.00</td>
+  <td>125.00</td>
+  <td>10.00</td>
+  <td>150.00</td>
+  <td>10.00</td>
+  <td>200.00</td>
+  <td>10.00</td>
+</tr>
+<tr>
+  <td>151-250</td>
+  <td>125.00</td>
+  <td>11.00</td>
+  <td>150.00</td>
+  <td>11.00</td>
+  <td>175.00</td>
+  <td>11.00</td>
+  <td>225.00</td>
+  <td>11.00</td>
+</tr>
+<tr>
+  <td>251-400</td>
+  <td>150.00</td>
+  <td>12.00</td>
+  <td>175.00</td>
+  <td>12.00</td>
+  <td>200.00</td>
+  <td>12.00</td>
+  <td>250.00</td>
+  <td>12.00</td>
+</tr>
+<tr>
+  <td>Above-400</td>
+  <td>175.00</td>
+  <td>13.00</td>
+  <td>200.00</td>
+  <td>13.00</td>
+  <td>225.00</td>
+  <td>13.00</td>
+  <td>275.00</td>
+  <td>13.00</td>
+</tr>
+</table>
+<div class="box">
+<div class="data">
+<h2>Electricity bill calculation</h2>
+<p>Choose Ampere </p>
+<select name="Ampere" id="Ampere">
+<option value="5">5 Ampere</option>
+<option value="15">15 Ampere</option>
+<option value="30">30 Ampere</option>
+<option value="60">60 Ampere</option>
+</select>
+</div>
+<p>Enter Previous Meter reading: </p> 
+    <input id="oldReading" type="number" placeholder="enter 1st reading....">  
+<p>Enter Current number:</p>
+    <input id="newReading"  type="number" placeholder="enter last reading....">         
+    <input type="button" onclick="calc()" value="Click for Calculate" >
+                      
+<p>Total energy unit consumed: </p>
+        <h4><span id="unit">... unit</span></h4>
+            
+<p>Your total bill amount is(Rs): </p>
+        <h4 id="Total">Rs... </h4>  
+            
+
+
+</body>
+</html>
